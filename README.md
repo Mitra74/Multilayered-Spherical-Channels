@@ -36,6 +36,7 @@ Each script is self-contained: it builds and solves the boundary-value diffusion
    or
 ```matlab
    internal_transmitter_3Layered_spheroid
+```
 3. Output: each script produces a concentration-vs-time plot at the selected observation point.
 
 Key parameters that can be adjusted at the top of each script:
