@@ -60,11 +60,11 @@ The paper also analyzes a second delivery scenario — pH-sensitive drug carrier
 1. **Carrier transport (outside → necrotic core).** Drug *carriers* are released from an external point source, exactly as in `external_transmitter_spheroid_diffusion.m`, except the diffusion coefficient used throughout is the *carrier's* diffusion coefficient rather than the free drug's. This gives the carrier concentration `U_c^1(r,t;r0)` inside the necrotic core (region 1) as a function of time.
 
 2. **Degradation / release at the necrotic core.** Carriers are assumed to degrade — releasing their drug payload — only within the necrotic core, via a first-order process with rate `k1` (all other layers use zero degradation, since they are assumed to be at a higher, non-triggering pH). The probability flux of carrier degradation at time `t` is obtained by integrating the carrier concentration over the necrotic-core volume and multiplying by `k1`:
-   `Ψ(r0,t) = k1 ∫ U_c^1(r,t;r0) dr`.
+   `Ψ(r0,t) = k1 ∫ u_c^1(r,t;r0) dV`.
 
-3. **Release function.** Discretizing time into intervals gives the probability that a carrier releases its payload within each interval — this is the **release function**, `ρ(t)`. It is essentially a histogram of "how much drug becomes available, and when," driven entirely by the carrier-transport solution from step 1 and the degradation rate `k1`.
+3. **Release function.** Discretizing time into intervals gives the probability that a carrier releases its payload within each interval — this is the **release function**, `ρ(t)`. It is essentially a histogram of "how much drug becomes available, and when," driven entirely by the carrier-transport solution from step 1 and the degradation rate `k1`. Ψ(r0,t) itself can also be considered as a release function without considering the probability. 
 
-4. **Drug propagation from the release point.** Separately, compute the impulse response for a drug (not carrier) released from the *center* of the necrotic core — this is the internal-transmitter model (`internal_transmitter_spheroid_diffusion.m`), but with `r_tx → 0` and using the free *drug's* diffusion coefficient instead of the carrier's.
+4. **Drug propagation from the release point.** Separately, compute the impulse response for a drug (not carrier) released from the *center* of the necrotic core — this is the internal-transmitter model (`internal_transmitter_spheroid_diffusion.m`), but with `r_tx → 0` and using the free *drug's* diffusion coefficient.
 
 5. **Convolution.** The final pH-triggered drug concentration at any observation point is the convolution of the release function from step 3 with the point-release impulse response from step 4:
    `T_pH-released(r,t) = ρ(t) * T(r,t | r0 = 0)`.
