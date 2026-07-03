@@ -76,11 +76,16 @@ If you need the implementation of this pH-triggered scenario, please get in touc
 ## Citation
 ```bibtex
 @article{rezaei2026multilayerspherical,
-  title={Molecular Communication Model for Drug Delivery in Multi-Layered Spherical Channels},
-  author={Rezaei, Mitra and Chappell, Michael and Noel, Adam},
-  journal={IEEE Transactions on Molecular, Biological, and Multi-Scale Communications},
-  year={2026}
-}
+  author={Rezaei, Mitra and Chappell, Michael J. and Noel, Adam},
+  journal={IEEE Transactions on Molecular, Biological, and Multi-Scale Communications}, 
+  title={Molecular Communication Model for Drug Delivery in Multi-Layered Spherical Channels}, 
+  year={2026},
+  volume={12},
+  number={},
+  pages={309-322},
+  keywords={Drugs;Tumors;Transmitters;Molecular communication;Extracellular;Toxicology;Biological system modeling;Receivers;Numerical models;Geometry;Molecular communication;diffusion;channel model;multi-layered spherical structures;tumor spheroids;drug delivery systems},
+  doi={10.1109/TMBMC.2026.3657747}}
+
 ```
 
 ## Author
