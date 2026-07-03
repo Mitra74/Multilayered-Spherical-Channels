@@ -17,8 +17,8 @@ All analytical results are validated against a custom particle-based simulation 
 ## Repository structure
 ```
 src/
-├── external_transmitter_spheroid_diffusion.m   — direct delivery: external point source (Section IV-A1)
-└── internal_transmitter_spheroid_diffusion.m   — direct delivery: internal point source (Section IV-A2)
+├── external_transmitter_3Layered_spheroid.m   — direct delivery: external point source 
+└── internal_transmitter_3Layered_spheroid.m   — direct delivery: internal point source 
 ```
 
 Each script is self-contained: it builds and solves the boundary-value diffusion problem for a three-layer spheroid, reconstructs the frequency-domain concentration at a chosen observation point via a spherical-harmonic expansion, applies an inverse FFT to obtain the time-domain concentration profile, and plots the result. Comments throughout reference the corresponding equation numbers in the paper (Eqs. 6–45) so the code can be read alongside the derivation.
