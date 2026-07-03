@@ -31,12 +31,11 @@ Each script is self-contained: it builds and solves the boundary-value diffusion
 1. Open MATLAB and navigate to `src/`
 2. Run either script directly, e.g.:
 ```matlab
-   external_transmitter_spheroid_diffusion
+   external_transmitter_3Layered_spheroid
 ```
    or
 ```matlab
-   internal_transmitter_spheroid_diffusion
-```
+   internal_transmitter_3Layered_spheroid
 3. Output: each script produces a concentration-vs-time plot at the selected observation point.
 
 Key parameters that can be adjusted at the top of each script:
