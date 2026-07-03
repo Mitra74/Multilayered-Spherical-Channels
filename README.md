@@ -8,9 +8,9 @@ Rezaei, M., Chappell, M., and Noel, A. "Molecular Communication Model for Drug D
 *Preliminary version: Rezaei, M., Chappell, M., and Noel, A. "General Molecular Communication Model in Multi-Layered Spherical Channels," IEEE International Conference on Communications (ICC), 2025.*
 
 ## Overview
-This repository implements a generalized analytical framework for diffusion-based molecular communication in multi-layered spherical environments, supporting an arbitrary number of layers and flexible transmitter–receiver positioning. The Green's function for the boundary value diffusion problem is derived for the layer containing a point source, with the channel impulse response derived for all other layers, coupled through interface continuity and flux boundary conditions.
+The paper derives a generalized analytical framework for diffusion-based molecular communication in multi-layered spherical environments, supporting an arbitrary number of layers and flexible transmitter–receiver positioning (transmitters cannot be located at layer boundaries). The Green's function for the boundary value diffusion problem is derived for the layer containing a point source, with the channel impulse response derived for all other layers, coupled through interface continuity and flux boundary conditions.
 
-The framework is applied to a three-layer tumour spheroid case study (necrotic core, hypoxic layer, proliferating outer layer) embedded in an infinite medium, modelling **direct delivery** from a point-source transmitter positioned either externally or internally to the spheroid.
+This repository implements the case study from the paper: a three-layer tumour spheroid (necrotic core, hypoxic layer, proliferating outer layer) embedded in an infinite medium, modelling direct delivery from a point-source transmitter positioned either externally or internally to the spheroid. The general N-layer framework itself is not implemented here in its arbitrary-layer form — the two scripts below solve the specific, closed-form three-layer boundary-value system.
 
 All analytical results are validated against a custom particle-based simulation (PBS), which accounts for short inter-layer distances by applying multiple diffusion-coefficient updates within a single molecule's time-step trajectory.
 
